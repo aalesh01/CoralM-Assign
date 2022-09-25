@@ -13,12 +13,17 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import RestuarantList from './Components/RestuarantList';
+import RestDetails from './Components/RestDetails';
+import {Routes,Route} from 'react-router-dom';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <RestuarantList/>
+        <Routes>
+          <Route path="/" element={<RestuarantList />} />
+          <Route path="/:restId" element={<RestDetails />} />
+        </Routes>
       </Box>
     </ChakraProvider>
   );
