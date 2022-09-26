@@ -40,6 +40,12 @@ app.post('/review/:id', async (req, res) => {
         res.send('Review added');
 })
 
+app.get('/admin', async (req, res) => {
+        const docs = await restaurantDB.find();
+        res.send(docs);
+})
+
+
 connectDatabase();
 
 app.listen(PORT, () => console.log(`Restaurant app listening on port ${PORT}!`))

@@ -40,7 +40,7 @@ const RestDetails = () => {
     }
     return (
       <StatGroup>
-       <Link to="/"> <Button colorScheme={'teal'} >Home</Button> </Link>
+       
        <Divider/>
         <Stat>
           <Heading>Resturant</Heading>

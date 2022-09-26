@@ -34,7 +34,7 @@ const RestuarantList = () => {
         <Tbody>
           {restaurants &&
             restaurants.map(restaurant => (
-                <Tr onClick={()=>navigate(`/${restaurant.id}`)} key={restaurant.id}>
+                <Tr sx={{'&:hover': {cursor:"pointer",background:"grey",color:"white"},boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}} onClick={()=>navigate(`/${restaurant.id}`)} key={restaurant.id}>
                   <Td>{restaurant.name}</Td>
                   <Td>
                     {restaurant.address +

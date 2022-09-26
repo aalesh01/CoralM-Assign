@@ -9,7 +9,7 @@ import {
   Grid,
   theme,
 } from '@chakra-ui/react';
-
+import AdminPage from './Components/AdminPage';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import RestuarantList from './Components/RestuarantList';
@@ -18,11 +18,12 @@ import {Routes,Route} from 'react-router-dom';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
+    <ChakraProvider theme={theme} resetCSS={false} >
+      <Box width={"60%"} margin={"auto"} textAlign="center" fontSize="xl">
         <Routes>
           <Route path="/" element={<RestuarantList />} />
           <Route path="/:restId" element={<RestDetails />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </Box>
     </ChakraProvider>
